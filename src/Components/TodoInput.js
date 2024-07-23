@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 export default function TodoInput({setItem}){
     const change=(name,date,amount)=>{
         name.length === 0 || date.length === 0 ? alert("Please enter name & Date"):
-        setItem(prevItem=>[...prevItem,{name:name, date:date}]);
+        setItem(prevItem=>[{name:name, date:date},...prevItem]);
         // console.log(`We got a list name is ${name} date is ${date} and amount is ${amount}`);
         
     }
@@ -34,7 +34,7 @@ export default function TodoInput({setItem}){
                     <input className='' value={date} type="date" onChange={dateOfItem} name="" id="" />
                 </div>
                 <div className='col-start-3 col-end-3'>
-                    <button className="border-4 border-solid border-green-700 w-40 text-white bg-green-700 rounded-md" type="button" onClick={handleOnButton}>Save</button>
+                    <button className="border-4 border-solid border-green-700 w-20 text-white bg-green-700 rounded-md" type="button" onClick={handleOnButton}>+</button>
                 </div>
 
            

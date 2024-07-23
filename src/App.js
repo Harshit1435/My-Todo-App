@@ -17,7 +17,7 @@ export default function App(){
       <> 
       <AppName/>
       < TodoInput setItem={setItem}/>
-     {item.length===0 ? <div className="text-center text-2xl">Please enter your task</div>  :<AddTodo initialTodoItems={item} removeItem={removeItem}/>}
+     {item.length===0 ? <div className="text-center text-2xl">You did complete your task.... Enjoy your day</div>  :<AddTodo initialTodoItems={item} removeItem={removeItem}/>}
       </>
     )
   }
